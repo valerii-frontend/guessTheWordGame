@@ -1,4 +1,4 @@
-# guessTheWordGame
+# Guess a word by definition! Game concept
 
 ## Rules 
 
