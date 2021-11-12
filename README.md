@@ -13,5 +13,7 @@
 - HTML5 markup
 - CSS3
 - JavaScript
+- API [Unsplash](https://unsplash.com/documentation)
+- API [Free Dictionary](https://dictionaryapi.dev/)
 ## 👤 Author
 - LinkedIn - [v.lozghachov](https://www.linkedin.com/in/valerii-lozghachov/)
