@@ -2,16 +2,16 @@
 
 ### Rules 
 
-+  Enter the word that the other player will have to guess
++ Enter the word that the other player will have to guess
 + Second player have equivalent count of try like a number of letter at the word
 + Good luck and enjoy! :-) 
 
 ### Screenshot
 
-![](./preview.jpg)
+![](./Screenshot.png)
 
 ### Preview
-[Try it online](https://valerii-frontend.github.io/guessTheWordGame).
+[Try it online](https://guess-a-word.netlify.app/).
 
 ### Built with
 
