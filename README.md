@@ -7,18 +7,11 @@
 + Good luck and enjoy! :-) 
 
 ### Screenshot
-
 ![](./Screenshot.png)
-
-### [Live preview](https://guess-a-word.netlify.app/).
-
-
+### [Live preview](https://guess-a-word.netlify.app/)
 ### Built with
-
 - HTML5 markup
 - CSS3
 - JavaScript
-
 ## Author
-
-- Website - [v.lozghachov](https://www.linkedin.com/in/valerii-lozghachov/)
+[v.lozghachov](https://www.linkedin.com/in/valerii-lozghachov/)
