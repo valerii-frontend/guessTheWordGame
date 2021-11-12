@@ -10,8 +10,8 @@
 
 ![](./Screenshot.png)
 
-### Preview
-[Try it online](https://guess-a-word.netlify.app/).
+### [Live preview](https://guess-a-word.netlify.app/).
+
 
 ### Built with
 
