@@ -14,4 +14,4 @@
 - CSS3
 - JavaScript
 ## Author
-[v.lozghachov](https://www.linkedin.com/in/valerii-lozghachov/)
+- LinkedIn - [v.lozghachov](https://www.linkedin.com/in/valerii-lozghachov/)
