@@ -90,7 +90,7 @@ function findTheWord() {
 //LOAD FOCUS INPUT
 window.addEventListener("load", (event) => {
 	input.focus();
-	body.style.backround = `url('https:/source.unsplash.com/random') center/cover no-repeat`;
+	getImage();
 });
 // START GAME EVENT
 find.addEventListener("click", function (e) {
