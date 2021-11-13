@@ -58,8 +58,7 @@ function checkTheAnswer() {
 		info.classList.add("lose");
 	}
 }
-// RE
-FUNCTION
+// RELOAD FUNCTION
 function startGame() {
 	location.reload();
 }
