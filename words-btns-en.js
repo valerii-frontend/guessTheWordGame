@@ -7,7 +7,6 @@ const content = document.querySelector(".content");
 const language = document.querySelector(".language input");
 const KEY = "mJUy_-8LKXPIvkpyyASoETkb7hhKW822TQTGJ1_pons";
 let text;
-let word;
 let h1 = document.querySelector("h1");
 // CLEAR HEADERS FUNC
 function clearBody() {
@@ -33,12 +32,12 @@ function checkTheAnswer() {
 		counter.classList.remove("blink");
 	}, 300);
 	let info = document.querySelector(".info");
-	if (word == text) {
+	if (input.value == text) {
 		clearBody();
 		info.classList.add("end");
 		h1.classList.add("win");
 		h1.classList.add("end");
-		h1.innerText = `You guessed! - ${word.toUpperCase()}`;
+		h1.innerText = `You guessed! - ${text.toUpperCase()}`;
 		info.textContent = "YOU WON! 🎉";
 		info.classList.add("win");
 		newGame.classList.remove("hide");
@@ -53,7 +52,7 @@ function checkTheAnswer() {
 		input.classList.add("hide");
 		h1.classList.add("lose");
 		h1.classList.add("end");
-		h1.innerText = `The answer was '${word.toUpperCase()}'`;
+		h1.innerText = `The answer was '${text.toUpperCase()}'`;
 		info.textContent = `YOU LOSE 😣!`;
 		info.classList.add("lose");
 	}
