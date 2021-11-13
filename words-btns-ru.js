@@ -24,12 +24,12 @@ function getImage() {
 			body.style.background = `url("${image}") center/cover no-repeat`;
 		});
 }
-function getImage() {
-	let random = Math.floor(Math.random() * 10);
-	let randomW = Math.floor(Math.random() * 10);
-	let image = `https://picsum.photos/80${random}/60${randomW}`;
-	body.style.backgroundImage = `url("${image}")`;
-}
+// function getImage() {
+// 	let random = Math.floor(Math.random() * 10);
+// 	let randomW = Math.floor(Math.random() * 10);
+// 	let image = `https://picsum.photos/80${random}/60${randomW}`;
+// 	body.style.backgroundImage = `url("${image}")`;
+// }
 // ANSWER FUNC
 function checkTheAnswer() {
 	let counter = document.querySelector("h2 strong");
