@@ -4,7 +4,7 @@ const answer = document.querySelector(".answer");
 const newGame = document.querySelector(".new");
 const body = document.querySelector("body");
 const content = document.querySelector(".content");
-const language = document.querySelector(".language input");
+const language = document.querySelector(".language");
 const KEY = "mJUy_-8LKXPIvkpyyASoETkb7hhKW822TQTGJ1_pons";
 let word;
 let h1 = document.querySelector("h1");
