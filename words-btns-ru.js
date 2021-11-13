@@ -116,10 +116,10 @@ newGame.addEventListener("click", startGame);
 function langToggle() {
 	let langs = language.querySelectorAll("span");
 	langs.forEach((lang) => {
-		if (lang.classList.contains("hide")) {
-			lang.classList.remove("hide");
+		if (lang.classList.contains("next")) {
+			lang.classList.remove("next");
 		} else {
-			lang.classList.add("hide");
+			lang.classList.add("next");
 		}
 	});
 }
