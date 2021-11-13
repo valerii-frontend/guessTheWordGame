@@ -32,7 +32,7 @@ function checkTheAnswer() {
 		counter.classList.remove("blink");
 	}, 300);
 	let info = document.querySelector(".info");
-	alert(input.value == text, input.value,text);
+	alert(`${input.value == text} VALUE =  ${input.value} THE WORD IS ${text}`);
 	if (input.value == text) {
 		clearBody();
 		info.classList.add("end");
@@ -74,8 +74,7 @@ function findTheWord() {
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
-			word = data[0].word.toLowerCase();
-			let definition =
+				let definition =	
 				String(data[0].meanings[0].definitions[0].definition).slice(0, 1).toUpperCase() +
 				String(data[0].meanings[0].definitions[0].definition).slice(1);
 			content.insertAdjacentHTML(
