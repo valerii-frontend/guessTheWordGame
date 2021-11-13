@@ -32,8 +32,7 @@ function checkTheAnswer() {
 		counter.classList.remove("blink");
 	}, 300);
 	let info = document.querySelector(".info");
-	alert(`${input.value == text} VALUE =  ${input.value} THE WORD IS ${text}`);
-	if (input.value == text) {
+	if (input.value.toLowerCase() == text) {
 		clearBody();
 		info.classList.add("end");
 		h1.classList.add("win");
