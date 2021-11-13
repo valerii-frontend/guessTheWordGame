@@ -98,6 +98,7 @@ find.addEventListener("click", function (e) {
 	findTheWord();
 	getImage();
 });
+/*
 // LANG TOGGLE
 language.addEventListener("change", function (e) {
 	const label = document.querySelector(".language label");
@@ -111,6 +112,7 @@ language.addEventListener("change", function (e) {
 		label.classList.remove("ru");
 	}
 });
+*/
 // GAME ANSWER EVENT
 answer.addEventListener("click", checkTheAnswer);
 input.addEventListener("keydown", function (e) {
