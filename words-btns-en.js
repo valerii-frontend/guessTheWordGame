@@ -32,6 +32,7 @@ function checkTheAnswer() {
 		counter.classList.remove("blink");
 	}, 300);
 	let info = document.querySelector(".info");
+	alert(input.value == text, input.value,text);
 	if (input.value == text) {
 		clearBody();
 		info.classList.add("end");
