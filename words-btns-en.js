@@ -4,7 +4,7 @@ const answer = document.querySelector(".answer");
 const newGame = document.querySelector(".new");
 const body = document.querySelector("body");
 const content = document.querySelector(".content");
-const language = document.querySelector(".language input");
+// const language = document.querySelector(".language input");
 const KEY = "mJUy_-8LKXPIvkpyyASoETkb7hhKW822TQTGJ1_pons";
 let word;
 let h1 = document.querySelector("h1");
@@ -97,6 +97,7 @@ find.addEventListener("click", function (e) {
 	getImage();
 });
 // LANG TOGGLE
+/*
 language.addEventListener("change", function (e) {
 	const label = document.querySelector(".language label");
 	if (this.checked) {
@@ -109,6 +110,7 @@ language.addEventListener("change", function (e) {
 		label.classList.remove("ru");
 	}
 });
+*/
 // GAME ANSWER EVENT
 answer.addEventListener("click", checkTheAnswer);
 input.addEventListener("keydown", function (e) {
