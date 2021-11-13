@@ -4,6 +4,7 @@ const answer = document.querySelector(".answer");
 const newGame = document.querySelector(".new");
 const body = document.querySelector("body");
 const content = document.querySelector(".content");
+const language = document.querySelector(".language input");
 const KEY = "mJUy_-8LKXPIvkpyyASoETkb7hhKW822TQTGJ1_pons";
 let text;
 let word;
@@ -32,7 +33,7 @@ function checkTheAnswer() {
 		counter.classList.remove("blink");
 	}, 300);
 	let info = document.querySelector(".info");
-	if (input.value == text) {
+	if (word == text) {
 		clearBody();
 		info.classList.add("end");
 		h1.classList.add("win");
@@ -73,7 +74,7 @@ function findTheWord() {
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
-			word = data[0].word;
+			word = data[0].word.toLowerCase();
 			let definition =
 				String(data[0].meanings[0].definitions[0].definition).slice(0, 1).toUpperCase() +
 				String(data[0].meanings[0].definitions[0].definition).slice(1);
@@ -97,7 +98,19 @@ find.addEventListener("click", function (e) {
 	findTheWord();
 	getImage();
 });
-
+// LANG TOGGLE
+language.addEventListener("change", function (e) {
+	const label = document.querySelector(".language label");
+	if (this.checked) {
+		label.textContent = "RU";
+		label.classList.add("ru");
+		label.classList.remove("en");
+	} else {
+		label.textContent = "EN";
+		label.classList.add("en");
+		label.classList.remove("ru");
+	}
+});
 // GAME ANSWER EVENT
 answer.addEventListener("click", checkTheAnswer);
 input.addEventListener("keydown", function (e) {
