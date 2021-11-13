@@ -9,10 +9,13 @@ body {
 	min-height: 100vh;
 	color: #ececec;
 	font-family: arial;
-	transition: 1s;
-	padding: 0;
+	padding: 0 15px;
 	margin: 0;
 	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.5s;
 }
 body:before {
 	content: "";
@@ -126,6 +129,42 @@ body:before {
 .hide {
 	display: none;
 }
+.language {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	font-weight: 700;
+	text-decoration: none;
+	opacity: 0.5;
+	transition: 0.5s;
+	color: #ececec;
+	overflow: hidden;
+	font-size: 1.25rem;
+}
+.language span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	transition: 0.5s;
+}
+.language span.next {
+	transform: translateY(-100%);
+	transition: 0.5s;
+}
+.en {
+	background-color: rgb(209, 32, 32);
+}
+.ru {
+	background-color: rgb(32, 44, 209);
+}
+
 h3 {
 	max-width: 770px;
 	padding: 0 10px;

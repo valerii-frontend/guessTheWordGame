@@ -4,7 +4,7 @@ const answer = document.querySelector(".answer");
 const newGame = document.querySelector(".new");
 const body = document.querySelector("body");
 const content = document.querySelector(".content");
-const language = document.querySelector(".language");
+const language = document.querySelector(".language input");
 const KEY = "mJUy_-8LKXPIvkpyyASoETkb7hhKW822TQTGJ1_pons";
 let word;
 let h1 = document.querySelector("h1");
@@ -24,6 +24,12 @@ function getImage() {
 			body.style.background = `url("${image}") center/cover no-repeat`;
 		});
 }
+function getImage() {
+	let random = Math.floor(Math.random() * 10);
+	let randomW = Math.floor(Math.random() * 10);
+	let image = `https://picsum.photos/80${random}/60${randomW}`;
+	body.style.backgroundImage = `url("${image}")`;
+}
 // ANSWER FUNC
 function checkTheAnswer() {
 	let counter = document.querySelector("h2 strong");
@@ -38,8 +44,8 @@ function checkTheAnswer() {
 		info.classList.add("end");
 		h1.classList.add("win");
 		h1.classList.add("end");
-		h1.innerText = `You guessed! - ${word.toUpperCase()}`;
-		info.textContent = "YOU WON! 🎉";
+		h1.innerText = `ЗАГАДАННОЕ СЛОВО! - ${word.toUpperCase()}`;
+		info.textContent = "ТЫ ВЫИГРАЛ! 🎉";
 		info.classList.add("win");
 		newGame.classList.remove("hide");
 		answer.classList.add("hide");
@@ -53,8 +59,8 @@ function checkTheAnswer() {
 		input.classList.add("hide");
 		h1.classList.add("lose");
 		h1.classList.add("end");
-		h1.innerText = `The answer was '${word.toUpperCase()}'`;
-		info.textContent = `YOU LOSE 😣!`;
+		h1.innerText = `ПРАВИЛЬНЫЙ ОТВЕТ - '${word.toUpperCase()}'`;
+		info.textContent = `ТЫ ПРОИГРАЛ 😣!`;
 		info.classList.add("lose");
 	}
 }
@@ -67,10 +73,10 @@ function findTheWord() {
 	input.classList.remove("start");
 	find.classList.add("hide");
 	answer.classList.remove("hide");
-	input.setAttribute("placeholder", "Enter the answer");
+	input.setAttribute("placeholder", "Введите ответ");
 	clearBody();
 	word = input.value.toLowerCase();
-	let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+	let url = `https://api.dictionaryapi.dev/api/v2/entries/ru/${word}`;
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
@@ -79,9 +85,9 @@ function findTheWord() {
 				String(data[0].meanings[0].definitions[0].definition).slice(1);
 			content.insertAdjacentHTML(
 				"beforeend",
-				`<h3>${definition} <p> Number of letters -  ${word.length} </p></h3>
-          <h2>You have a <strong>${word.length}</strong> try</h2>
-          <p class='info game'>Type the answer and click <span class='answer'>"ANSWER BUTTON 🔑"</span> or press <span class='key'>"ENTER"</span></p>`
+				`<h3>${definition} <p> Количество букв -  ${word.length} </p></h3>
+          <h2>Осталось <strong>${word.length}</strong> попыток</h2>
+          <p class='info game'>Введите ответ и нажмите <span class='answer'>"ОТВЕТИТЬ 🔑"</span> или нажмите <span class='key'>"ENTER"</span></p>`
 			);
 		});
 	input.classList.add("game");
@@ -97,7 +103,6 @@ find.addEventListener("click", function (e) {
 	findTheWord();
 	getImage();
 });
-
 // GAME ANSWER EVENT
 answer.addEventListener("click", checkTheAnswer);
 input.addEventListener("keydown", function (e) {
@@ -106,16 +111,15 @@ input.addEventListener("keydown", function (e) {
 });
 // NEW GAME
 newGame.addEventListener("click", startGame);
-
 // LANG TOGGLE
 
 function langToggle() {
 	let langs = language.querySelectorAll("span");
 	langs.forEach((lang) => {
-		if (lang.classList.contains("next")) {
-			lang.classList.remove("next");
+		if (lang.classList.contains("hide")) {
+			lang.classList.remove("hide");
 		} else {
-			lang.classList.add("next");
+			lang.classList.add("hide");
 		}
 	});
 }
